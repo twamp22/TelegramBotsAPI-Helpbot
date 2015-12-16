@@ -3,7 +3,11 @@ ini_set('error_reporting', E_ALL);
 
 //Define BotToken
 $botToken = "";
-if ($botToken === "") {	exit("This script has no valid bot token!");}
+if ($botToken === "") {
+	exit("Token Unauthorized! This script has no valid bot token!");
+} else {
+	print_r("Token Accepted!");
+}
 //prepare BOT API URL
 $url = array(
 	"https://api.telegram.org/bot".$botToken,
